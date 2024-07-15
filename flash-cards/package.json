@@ -1,0 +1,11 @@
+{
+  "name": "flash-cards",
+  "version": "1.0.0",
+  "description": "flash-card game. The goal is to find all pairs of images in the table  ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikita Evteev",
+  "license": "MIT"
+}
