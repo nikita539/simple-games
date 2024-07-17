@@ -1,0 +1,23 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.cards_container {
+    width: 50%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin: 100px auto;
+}
+
+.flash_card {
+    background-color: aqua;
+    border-radius: 15px;
+}
