@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // set onclick events to flash-cards
-    const flash_cards = document.getElementsByClassName('flash_card_inner')
+    const flash_cards = document.getElementsByClassName('flash_card')
     
     for (let i = 0; i < flash_cards.length; i++) {
 
