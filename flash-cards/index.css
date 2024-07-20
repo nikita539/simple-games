@@ -2,19 +2,24 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
     text-align: center;
+    margin: 0;
+    flex-grow: 1;
 }
 
 .cards_container {
-    width: 50%;
-    height: 500px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
     margin: 100px auto;
+    flex-grow: 10;
+    height: 100%;
+    width: 50%;
 }
 
 .flash_card {
@@ -23,6 +28,7 @@ body {
     position: relative;
     background-color: transparent;
     transition: transform 0.8s;
+    z-index: 10;
 }
 
 .flash_card_face--front, .flash_card_face--back {
