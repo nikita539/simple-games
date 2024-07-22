@@ -1,36 +1,26 @@
 // https://www.codingnepalweb.com/best-javascript-games-for-beginners/
 
-document.addEventListener('DOMContentLoaded', function() {
-    const flashCards = document.getElementsByClassName('flash_card'); // list of all flash cards
-
-    for (let i = 0; i < flashCards.length; i++) {
-
-        // set onclick events to flash-cards
-        flashCards[i].onclick = onClick
-    }
-})
-
 //variables
+const flashCards = document.getElementsByClassName('flash_card'); // list of all flash cards
 const card_container = document.getElementById('card_container');
 let flipedCards = [];
 let flipedCardsCount = 0
+
+for (let i = 0; i < flashCards.length; i++) {
+
+    // set onclick events to flash-cards
+    flashCards[i].onclick = onClick
+}
 
 // functions
 function onClick(event) {
     flipCard(event)
     isMatch(event)
 }
-
 function flipCard(event) {
     event.currentTarget.classList.toggle('is_fliped')
     flipedCards.push(event.currentTarget)
 }
-
-function disableEvents(flag) {
-    if (flag) card_container.style.pointerEvents = 'none'  
-    else card_container.style.pointerEvents = ''  
-}
-
 function isMatch() {
     if (flipedCards.length == 2) {
 
@@ -60,4 +50,8 @@ function isMatch() {
         }
 
     }
+}
+function disableEvents(flag) {
+    if (flag) card_container.style.pointerEvents = 'none'  
+    else card_container.style.pointerEvents = ''  
 }
