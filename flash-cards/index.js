@@ -16,6 +16,7 @@ for (let i = 0; i < flashCards.length; i++) {
 function onClick(event) {
     flipCard(event)
     isMatch(event)
+    gameIsOver()
 }
 function flipCard(event) {
     event.currentTarget.classList.toggle('is_fliped')
@@ -54,4 +55,11 @@ function isMatch() {
 function disableEvents(flag) {
     if (flag) card_container.style.pointerEvents = 'none'  
     else card_container.style.pointerEvents = ''  
+}
+function gameIsOver() {
+    if (flipedCardsCount == 8) {
+        setTimeout(() => {
+            alert("Game is over !")
+        }, 1000)
+    }
 }
