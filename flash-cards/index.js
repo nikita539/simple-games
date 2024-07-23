@@ -20,6 +20,7 @@ function onClick(event) {
 }
 function flipCard(event) {
     event.currentTarget.classList.toggle('is_fliped')
+    event.currentTarget.onclick = null
     flipedCards.push(event.currentTarget)
 }
 function isMatch() {
@@ -27,10 +28,6 @@ function isMatch() {
 
         if (flipedCards[0].dataset.number == flipedCards[1].dataset.number) {
             console.log(flipedCards[0].dataset.number == flipedCards[1].dataset.number)
-
-            flipedCards.forEach((el) => {
-                el.onclick = null
-            })
 
             flipedCardsCount++
 
