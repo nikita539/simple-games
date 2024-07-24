@@ -20,9 +20,9 @@ function onClick(event) {
 }
 function flipCard(event) {
     event.currentTarget.classList.toggle('is_fliped')
-    event.currentTarget.onclick = null
     flipedCards.push(event.currentTarget)
 }
+
 function isMatch() {
     if (flipedCards.length == 2) {
 
