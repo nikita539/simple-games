@@ -21,6 +21,7 @@ function flipCard(event) {
     else firstCard = event.currentTarget
     
     event.currentTarget.classList.toggle(CLASS_NAME_TO_FLIP)
+    event.currentTarget.onclick = null
     
     if (firstCard && secondCard) matchCards()
 } 
@@ -28,9 +29,6 @@ function matchCards() {
     disableField(true)
 
     if (firstCard.querySelector('img').src == secondCard.querySelector('img').src) {
-        firstCard.onclick = null
-        secondCard.onclick = null
-
         firstCard = null
         secondCard = null
 
@@ -45,6 +43,9 @@ function matchCards() {
         setTimeout(() => {
             firstCard.classList.remove(CLASS_NAME_TO_FLIP)
             secondCard.classList.remove(CLASS_NAME_TO_FLIP)
+
+            firstCard.onclick = flipCard
+            secondCard.onclick = flipCard
 
             firstCard = null
             secondCard = null
