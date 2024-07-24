@@ -53,10 +53,16 @@ body {
 }
 
 .flash_card_face--back {
-    background-color: blueviolet;
+    background-color: gainsboro;
     transform: rotateY(180deg);
 }
 
 .is_fliped {
     transform: rotateY(180deg);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    margin: 1px;
 }

@@ -3,6 +3,7 @@
 const flashCards = document.getElementsByClassName('flash_card');
 const cardContainer = document.getElementById('card_container');
 
+
 let firstCard, secondCard;
 let flipedCardCount = 0;
 
@@ -26,7 +27,7 @@ function flipCard(event) {
 function matchCards() {
     disableField(true)
 
-    if (firstCard.dataset.number == secondCard.dataset.number) {
+    if (firstCard.querySelector('img').src == secondCard.querySelector('img').src) {
         firstCard.onclick = null
         secondCard.onclick = null
 
@@ -65,4 +66,7 @@ function gameIsOver() {
             flashCards[index].onclick = flipCard
         }
     }, 1000) 
+}
+function shuffle() {
+    
 }
