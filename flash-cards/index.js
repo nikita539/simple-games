@@ -68,7 +68,7 @@ function gameIsOver() {
             flashCards[index].onclick = flipCard
         }
 
-        shuffle()
+        setTimeout(shuffle, 1000)
 
         flipedCardCount = 0
     }, 800) 
