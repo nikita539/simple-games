@@ -52,7 +52,7 @@ function matchCards() {
             secondCard = null
 
             disableField(false)
-        }, 2000)
+        }, 1000)
     }
 }
 function disableField(flag) {
@@ -84,5 +84,3 @@ function shuffle() { // might be improved. Algoritm is too predictable
         images[index == 0 ? 8 : index * 2].src = currImge
     }
 }
-
-console.log(cardContainer.querySelectorAll('img'))
