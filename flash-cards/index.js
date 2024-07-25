@@ -1,8 +1,8 @@
 // https://www.codingnepalweb.com/best-javascript-games-for-beginners/
 
+// variables
 const flashCards = document.getElementsByClassName('flash_card');
 const cardContainer = document.getElementById('card_container');
-
 
 let firstCard, secondCard;
 let flipedCardCount = 0;
@@ -10,11 +10,12 @@ let flipedCardCount = 0;
 const CLASS_NAME_TO_FLIP = 'is_fliped'
 
 
+
 for (let index = 0; index < flashCards.length; index++) {
     flashCards[index].onclick = flipCard
 }
 
-
+// functions
 function flipCard(event) {
 
     if (firstCard) secondCard = event.currentTarget
@@ -72,7 +73,7 @@ function gameIsOver() {
         flipedCardCount = 0
     }, 800) 
 }
-function shuffle() {
+function shuffle() { // might be improved. Algoritm is too predictable
     const images = cardContainer.querySelectorAll('img')
     
     for (let index = 0; index < images.length / 2; index++) { // How to count the 'some index' ?
