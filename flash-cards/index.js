@@ -79,8 +79,10 @@ function shuffle() { // might be improved. Algoritm is too predictable
     for (let index = 0; index < images.length / 2; index++) { // How to count the 'some index' ?
         let currImge = images[index].src
 
-        images[index].src = images[index * 2].src
+        images[index].src = images[index == 0 ? 8 : index * 2].src
 
-        images[index * 2].src = currImge
+        images[index == 0 ? 8 : index * 2].src = currImge
     }
 }
+
+console.log(cardContainer.querySelectorAll('img'))
