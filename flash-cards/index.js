@@ -66,8 +66,20 @@ function gameIsOver() {
             flashCards[index].classList.remove(CLASS_NAME_TO_FLIP)
             flashCards[index].onclick = flipCard
         }
-    }, 1000) 
+
+        shuffle()
+
+        flipedCardCount = 0
+    }, 800) 
 }
 function shuffle() {
+    const images = cardContainer.querySelectorAll('img')
     
+    for (let index = 0; index < images.length / 2; index++) { // How to count the 'some index' ?
+        let currImge = images[index].src
+
+        images[index].src = images[index * 2].src
+
+        images[index * 2].src = currImge
+    }
 }

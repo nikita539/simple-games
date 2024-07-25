@@ -46,7 +46,7 @@ body {
 .flash_card_face--front, .flash_card_face--back {
     width: 100%;
     height: 100%;
-    background-color: blue;
+    background-color: gainsboro;
     position: absolute;
     border-radius: 15px;
     backface-visibility: hidden;
