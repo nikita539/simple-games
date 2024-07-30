@@ -1,3 +1,7 @@
 flash-cards/node_modules/
 flash-cards/dist/
 flash-cards/.parcel-cache/
+
+snake_game/node_modules/
+snake_game/dist/
+snake_game/.parcel-cache/
