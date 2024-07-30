@@ -1,5 +1,10 @@
 // https://www.codingnepalweb.com/best-javascript-games-for-beginners/
 
+// TO-DO:
+// 1. Smooth animation when it fires after page is rendered
+// 2. Rewrite shufle alghoritm to make it more unpredictable
+// 3. May be improve design of UI 
+
 // variables
 const flashCards = document.getElementsByClassName('flash_card');
 const cardContainer = document.getElementById('card_container');
@@ -8,7 +13,6 @@ let firstCard, secondCard;
 let flipedCardCount = 0;
 
 const CLASS_NAME_TO_FLIP = 'is_fliped'
-
 
 
 for (let index = 0; index < flashCards.length; index++) {
