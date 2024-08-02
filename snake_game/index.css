@@ -5,8 +5,10 @@ body {
 }
 
 .snake {
-    width: 100px;
-    height: 100px;
+    width: 30px;
+    height: 30px;
     background-color: greenyellow;
     position: relative;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
 }
